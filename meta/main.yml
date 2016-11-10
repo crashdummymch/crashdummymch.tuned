@@ -1,0 +1,8 @@
+---
+  ---
+  galaxy_info:
+  author:
+  description:
+  license:
+  min_ansible_version: 1.0
+  dependencies: []
