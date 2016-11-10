@@ -1,1 +1,10 @@
 ---
+- name: Include OS specific variables
+  include_vars: "{{ ansible_os_family}}.yml"
+
+- name: Install the tuned packages
+  package: name={{ item }} state={{ package_state }}
+  with_items: tuned_pkgs
+
+
+
