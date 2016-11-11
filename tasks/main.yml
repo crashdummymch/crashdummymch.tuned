@@ -1,6 +1,6 @@
 ---
 # include variables
-- name: Include OS specific variables
+- name: Tuned: Include OS specific variables
   include_vars: "{{ item }}"
   with_first_found:
     - "{{ ansible_distribution }}.yml"
@@ -9,17 +9,17 @@
   tags: tuned
 
 # install package
-- name: Manage the tuned packages
+- name: Tuned: Manage the tuned packages
   package: name={{ tuned_package_name }} state={{ tuned_package_state }}
   tags: tuned
 
 # manage main configuration files
-- name: manage tuned-main.conf
+- name: Tuned: Manage tuned-main.conf
   template: src=../templates/tuned-main.conf.j2 dest="{{ tuned_config_dir }}/tuned-conf"
   notify: tuned_service_restart
   tags: tuned
 
 # manage service
-- name: Manage tuned service
+- name: Tuned: Manage tuned service
   service: name={{ tuned_service_name }} state={{ tuned_service_state }}
   tags: tuned
