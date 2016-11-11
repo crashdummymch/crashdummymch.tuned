@@ -1,9 +1,8 @@
 #Ansible Role: crashdummymch.tuned
 
-
-Ansible role for managing tuned service
-Manages package tuned
-Manages service tuned
+Ansible role for managing tuned service  
+Manages package tuned  
+Manages service tuned  
 
 
 #License:
