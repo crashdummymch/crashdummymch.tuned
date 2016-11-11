@@ -1,1 +1,12 @@
 ---
+# restart tuned service
+- name: tuned_service_restart
+  service: name={{ tuned_service_name }} state=restarted
+
+# stop tuned service
+- name: tuned_service_stop
+  service: name={{ tuned_service_name }} state=stopped
+
+# start service
+- name: tuned_service_start
+  service: name={{ tuned_service_name }} state=started
