@@ -1,4 +1,0 @@
----
-tuned_pkgs: tuned
-tuned_service: tuned
-tuned_conf_dir: "/etc/tuned"
